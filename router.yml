@@ -13,11 +13,3 @@
       ios_l3_interface:
         name: loopback 2
         ipv4: 10.0.2.2/24
-        
-    - name: Show ip
-      ios_command:
-        commands:
-          - show ip int brief
-      register: show_ip
-
-    - debug: var=show_ip.stdout_lines
