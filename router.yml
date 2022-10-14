@@ -13,3 +13,9 @@
       ios_l3_interface:
         name: loopback 2
         ipv4: 10.0.2.2/24
+        
+    - name: Show ip
+      ios_command:
+        commands:
+         - show ip int bri
+      register: show_ip
