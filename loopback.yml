@@ -1,11 +1,11 @@
 ---
-- name: dat ip cho loobpack
+-name: dat ip cho loobpack
   hosts: all
 
   tasks:
-    - name: Set loopback IPv4 address
+    -name: Set loopback IPv4 address
       cisco.ios.ios_l3_interface:
         config:
         - name: loopback 0
         - ipv4: 10.0.0.1/24
-    - debug: var=show_ip.stdout_lines
+    -debug: var=show_ip.stdout_lines
