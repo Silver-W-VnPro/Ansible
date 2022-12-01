@@ -1,19 +1,14 @@
 ---
-- name: Set Ip Loobpack
+- name: Set Ip 
   hosts: all
   gather_facts: no
 
   tasks:
-    - name: Set loopback IPv4 address
+    - name: Dat ip cho cong fastEthernet0/1
       ios_l3_interface:
-        name: loopback 1
-        ipv4: 10.0.1.1/24
+        name: GigabitEthernet0/1
+        ipv4: 192.168.1.1/24
 
-    - name: Set loopback IPv4 address
-      ios_l3_interface:
-        name: loopback 2
-        ipv4: 10.0.2.2/24
-        
     - name: Show ip
       ios_command:
         commands:
