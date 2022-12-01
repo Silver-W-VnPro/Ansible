@@ -4,12 +4,12 @@
   gather_facts: no
 
   tasks:
-    -name: Dat ip 
+    - name: Dat ip 
      ios_l3_interface:
         name: GigabitEthernet0/1
         ipv4: 192.168.1.1/24
 
-    -name: Show ip
+    - name: Show ip
      ios_command:
         commands:
          - show ip int bri
